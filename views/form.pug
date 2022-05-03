@@ -3,7 +3,8 @@ extends layout
 
 block content 
     h1  New message 
-    form(action="/new" method= "POST")
-        input(type="text" placeholder="Author:")
-        input(type="text" placeholder="Message:")
-        input(type="submit")
+    a(href="/" class="aIndex") Index 
+    form(action="/new" method= "POST" class="formMessage")
+        input(type="text" name="author" class="tAuthor" placeholder="Author:")
+        input(type="text" name="message" class="tMessage" placeholder="Message:")
+        input(type="submit" class="bSubmit" value="Send message")

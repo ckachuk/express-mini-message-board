@@ -1,8 +1,107 @@
+:root{
+  --color1 : #001e2f;
+  --color2 : #00415b;
+  --color3 : #006f92;
+  --color4 : #00a9d2;
+  --color5 : #00f1ff;
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: var(--color2);
+  color: var(--color5);
 }
 
-a {
+
+
+.content{
+    display: grid;
+    margin: 20px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    ". . message . ."
+    "author author  author  date date";
+    background-color: var(--color5);
+    border-radius: 10px;
+}
+
+.pMessage{
+  grid-area: message;
+  margin-bottom: 25px;
+  padding: 10px;
+  border-radius: 0px 0px 10px 10px;
+  color: var(--color1);
+}
+
+.pAuthor{
+  grid-area: author;
+  background-color: var(--color3);
+  padding: 10px;
+}
+
+.pDate{
+  grid-area: date;
+  background-color: var(--color3);
+  padding: 10px;
+}
+
+.aNew{
   color: #00B7FF;
+  font-size: 30px;
+  background-color: var(--color3);
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 10px;
+  margin: 40px;
+}
+
+#pWelcome{
+  margin: 10px 10px 30px 10px;
+}
+
+.formMessage{
+  display: grid;
+  margin: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  " . tAuthor ."
+  " . tMessage ."
+  " . bSubmit  .";
+  background-color: var(--color5);
+  border-radius: 10px;
+}
+
+.tAuthor{
+  grid-area: tAuthor;
+  margin: 50px 10px 10px 10px;
+  padding: 10px;
+}
+
+.tMessage{
+  grid-area: tMessage;
+  margin: 10px;
+  padding: 10px 10px 100px 10px;
+}
+
+.bSubmit{
+  grid-area: bSubmit;
+  margin: 10px 10px 50px 0px;
+  height: 40px;
+  background-color: #001e2f;
+  border: none;
+  color: var(--color5);
+  border-radius: 10px;
+}
+
+.aIndex{
+  color: #00B7FF;
+  font-size: 30px;
+  margin: 40px;
+  background-color: var(--color3);
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 10px;
 }

@@ -2,11 +2,16 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p#pWelcome Welcome to #{title}
+  a(href="/new" class="aNew") New message 
   ul 
     each message in messages
-      li= message.user 
-      p= message.text
-      p= message.added
+      .content
+        .pMessage
+          p=  "Message: " + message.text
+        .pAuthor
+          p= "Author: " + message.user 
+        .pDate 
+          p=  "Date created: "+ message.added
     else 
       li There are no message 
